@@ -21,6 +21,13 @@
 		C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */; };
 		C1400B53227AD10100D10312 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B52227AD10100D10312 /* ListItem.swift */; };
 		C1400B55227AD15B00D10312 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B54227AD15B00D10312 /* ListViewModel.swift */; };
+		C1400B58227AD8D700D10312 /* ARDNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B57227AD8D700D10312 /* ARDNavigationController.swift */; };
+		C1400B5A227AD93F00D10312 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B59227AD93F00D10312 /* UIColor+AppColors.swift */; };
+		C1400B5D227AE2DF00D10312 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1400B5F227AE2DF00D10312 /* Localizable.strings */; };
+		C1400B61227AE3FC00D10312 /* UIFont+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B60227AE3FC00D10312 /* UIFont+AppFonts.swift */; };
+		C1400B65227AE5F000D10312 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B63227AE5F000D10312 /* ListCell.swift */; };
+		C1400B66227AE5F000D10312 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1400B64227AE5F000D10312 /* ListCell.xib */; };
+		C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B67227AE78900D10312 /* UITableView+Dequeueing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +48,13 @@
 		C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelingProtocol.swift; sourceTree = "<group>"; };
 		C1400B52227AD10100D10312 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		C1400B54227AD15B00D10312 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C1400B57227AD8D700D10312 /* ARDNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDNavigationController.swift; sourceTree = "<group>"; };
+		C1400B59227AD93F00D10312 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		C1400B5E227AE2DF00D10312 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C1400B60227AE3FC00D10312 /* UIFont+AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFonts.swift"; sourceTree = "<group>"; };
+		C1400B63227AE5F000D10312 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		C1400B64227AE5F000D10312 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		C1400B67227AE78900D10312 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C1400B3D2279C54000D10312 /* List */,
+				C1400B56227AD8B300D10312 /* Shared */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -118,6 +133,7 @@
 		C1400B392279C49000D10312 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C1400B62227AE5D600D10312 /* List */,
 				C1400B3A2279C49C00D10312 /* LaunchScreen */,
 			);
 			path = Views;
@@ -135,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				C1400B2D2279BF5B00D10312 /* Assets.xcassets */,
+				C1400B5F227AE2DF00D10312 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -178,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				C1400B46227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift */,
+				C1400B59227AD93F00D10312 /* UIColor+AppColors.swift */,
+				C1400B60227AE3FC00D10312 /* UIFont+AppFonts.swift */,
+				C1400B67227AE78900D10312 /* UITableView+Dequeueing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +232,23 @@
 			isa = PBXGroup;
 			children = (
 				C1400B52227AD10100D10312 /* ListItem.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C1400B56227AD8B300D10312 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B57227AD8D700D10312 /* ARDNavigationController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C1400B62227AE5D600D10312 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B63227AE5F000D10312 /* ListCell.swift */,
+				C1400B64227AE5F000D10312 /* ListCell.xib */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -277,8 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
+				C1400B5D227AE2DF00D10312 /* Localizable.strings in Resources */,
 				C1400B2E2279BF5B00D10312 /* Assets.xcassets in Resources */,
 				C1400B2C2279BF5A00D10312 /* ListViewController.storyboard in Resources */,
+				C1400B66227AE5F000D10312 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,9 +374,14 @@
 				C1400B55227AD15B00D10312 /* ListViewModel.swift in Sources */,
 				C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */,
 				C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */,
+				C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */,
+				C1400B65227AE5F000D10312 /* ListCell.swift in Sources */,
 				C1400B44227ACA9C00D10312 /* RootCoordinator.swift in Sources */,
+				C1400B58227AD8D700D10312 /* ARDNavigationController.swift in Sources */,
+				C1400B5A227AD93F00D10312 /* UIColor+AppColors.swift in Sources */,
 				C1400B292279BF5A00D10312 /* ListViewController.swift in Sources */,
 				C1400B42227ACA2500D10312 /* CoordinatingProtocol.swift in Sources */,
+				C1400B61227AE3FC00D10312 /* UIFont+AppFonts.swift in Sources */,
 				C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */,
 				C1400B272279BF5A00D10312 /* AppDelegate.swift in Sources */,
 				C1400B53227AD10100D10312 /* ListItem.swift in Sources */,
@@ -362,6 +406,14 @@
 				C1400B302279BF5B00D10312 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C1400B5F227AE2DF00D10312 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1400B5E227AE2DF00D10312 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

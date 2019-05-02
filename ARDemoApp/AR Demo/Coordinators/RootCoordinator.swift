@@ -12,7 +12,7 @@ class RootCoordinator: NavigationCoordinating {
     private(set) var root: UINavigationController
     
     init() {
-        root = UINavigationController(nibName: nil, bundle: nil)
+        root = ARDNavigationController()
     }
     
     func begin() -> UIViewController {

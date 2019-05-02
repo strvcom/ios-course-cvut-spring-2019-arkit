@@ -14,4 +14,19 @@ enum ListItem: CaseIterable {
     case earth
     case dice
     case face
+    
+    var name: String {
+        switch self {
+        case .template:
+            return NSLocalizedString("XCODE_TEMPLATE", comment: "")
+        case .usdz:
+            return NSLocalizedString("USDZ", comment: "")
+        case .earth:
+            return NSLocalizedString("SIMPLE_OBJECT", comment: "")
+        case .dice:
+            return NSLocalizedString("DICE_GAME", comment: "")
+        case .face:
+            return NSLocalizedString("FACE_TRACKING", comment: "")
+        }
+    }
 }
