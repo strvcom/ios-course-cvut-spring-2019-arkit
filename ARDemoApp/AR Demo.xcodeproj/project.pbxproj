@@ -13,6 +13,14 @@
 		C1400B2C2279BF5A00D10312 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1400B2A2279BF5A00D10312 /* ListViewController.storyboard */; };
 		C1400B2E2279BF5B00D10312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1400B2D2279BF5B00D10312 /* Assets.xcassets */; };
 		C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1400B2F2279BF5B00D10312 /* LaunchScreen.storyboard */; };
+		C1400B42227ACA2500D10312 /* CoordinatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B41227ACA2500D10312 /* CoordinatingProtocol.swift */; };
+		C1400B44227ACA9C00D10312 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B43227ACA9C00D10312 /* RootCoordinator.swift */; };
+		C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B46227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift */; };
+		C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B48227ACE4C00D10312 /* ListCoordinatingProtocol.swift */; };
+		C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */; };
+		C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */; };
+		C1400B53227AD10100D10312 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B52227AD10100D10312 /* ListItem.swift */; };
+		C1400B55227AD15B00D10312 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B54227AD15B00D10312 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +33,14 @@
 		C1400B2D2279BF5B00D10312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1400B302279BF5B00D10312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1400B322279BF5B00D10312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1400B41227ACA2500D10312 /* CoordinatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatingProtocol.swift; sourceTree = "<group>"; };
+		C1400B43227ACA9C00D10312 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		C1400B46227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNameIdentifiableProtocol.swift; sourceTree = "<group>"; };
+		C1400B48227ACE4C00D10312 /* ListCoordinatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatingProtocol.swift; sourceTree = "<group>"; };
+		C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelingProtocol.swift; sourceTree = "<group>"; };
+		C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelingProtocol.swift; sourceTree = "<group>"; };
+		C1400B52227AD10100D10312 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		C1400B54227AD15B00D10312 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,9 +94,13 @@
 		C1400B252279BF5A00D10312 /* AR Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C1400B40227ACA0E00D10312 /* Coordinators */,
+				C1400B50227AD0E200D10312 /* Model */,
 				C1400B382279C47E00D10312 /* Scenes */,
 				C1400B3C2279C50700D10312 /* SupportingFiles */,
 				C1400B3B2279C4B800D10312 /* Resources */,
+				C1400B3F227ACA0000D10312 /* Utils */,
+				C1400B4A227ACFD000D10312 /* ViewModels */,
 				C1400B392279C49000D10312 /* Views */,
 				C1400B262279BF5A00D10312 /* AppDelegate.swift */,
 			);
@@ -132,6 +152,66 @@
 			children = (
 				C1400B282279BF5A00D10312 /* ListViewController.swift */,
 				C1400B2A2279BF5A00D10312 /* ListViewController.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C1400B3F227ACA0000D10312 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B45227ACAD400D10312 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C1400B40227ACA0E00D10312 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B41227ACA2500D10312 /* CoordinatingProtocol.swift */,
+				C1400B48227ACE4C00D10312 /* ListCoordinatingProtocol.swift */,
+				C1400B43227ACA9C00D10312 /* RootCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C1400B45227ACAD400D10312 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B46227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1400B4A227ACFD000D10312 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */,
+				C1400B4F227AD07700D10312 /* List */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C1400B4F227AD07700D10312 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */,
+				C1400B54227AD15B00D10312 /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C1400B50227AD0E200D10312 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B51227AD0EF00D10312 /* List */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1400B51227AD0EF00D10312 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B52227AD10100D10312 /* ListItem.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -252,8 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1400B55227AD15B00D10312 /* ListViewModel.swift in Sources */,
+				C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */,
+				C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */,
+				C1400B44227ACA9C00D10312 /* RootCoordinator.swift in Sources */,
 				C1400B292279BF5A00D10312 /* ListViewController.swift in Sources */,
+				C1400B42227ACA2500D10312 /* CoordinatingProtocol.swift in Sources */,
+				C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */,
 				C1400B272279BF5A00D10312 /* AppDelegate.swift in Sources */,
+				C1400B53227AD10100D10312 /* ListItem.swift in Sources */,
+				C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
