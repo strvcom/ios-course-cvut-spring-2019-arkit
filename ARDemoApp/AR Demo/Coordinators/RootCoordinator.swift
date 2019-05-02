@@ -29,6 +29,12 @@ class RootCoordinator: NavigationCoordinating {
 // MARK: List Coordinating
 extension RootCoordinator: ListCoordinating {
     func didSelect(item: ListItem, in controller: ListViewController) {
-        
+        switch item {
+        case .template:
+            let template = XcodeTemplateViewController.fromStoryboard
+            root.pushViewController(template, animated: true)
+        default:
+            break
+        }
     }
 }

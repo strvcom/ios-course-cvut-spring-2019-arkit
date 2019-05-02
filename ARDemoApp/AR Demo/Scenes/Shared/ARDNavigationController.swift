@@ -18,11 +18,18 @@ class ARDNavigationController: UINavigationController {
         super.init(coder: aDecoder)
         setup()
     }
+    
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        visibleViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        super.pushViewController(viewController, animated: animated)
+    }
 }
 
 // MARK: Setup
 private extension ARDNavigationController {
     func setup() {
+        navigationBar.tintColor = .appTextLight
         navigationBar.barTintColor = .appBackground
         navigationBar.titleTextAttributes = [.font: UIFont.heading, .foregroundColor: UIColor.appTextLight]
     }

@@ -28,6 +28,9 @@
 		C1400B65227AE5F000D10312 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B63227AE5F000D10312 /* ListCell.swift */; };
 		C1400B66227AE5F000D10312 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1400B64227AE5F000D10312 /* ListCell.xib */; };
 		C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B67227AE78900D10312 /* UITableView+Dequeueing.swift */; };
+		C1400BB2227B090D00D10312 /* XcodeTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400BB1227B090D00D10312 /* XcodeTemplateViewController.swift */; };
+		C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1400BB3227B092800D10312 /* XcodeTemplateViewController.storyboard */; };
+		C1400BB6227B099300D10312 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C1400BB5227B099300D10312 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		C1400B63227AE5F000D10312 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		C1400B64227AE5F000D10312 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		C1400B67227AE78900D10312 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		C1400BB1227B090D00D10312 /* XcodeTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeTemplateViewController.swift; sourceTree = "<group>"; };
+		C1400BB3227B092800D10312 /* XcodeTemplateViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XcodeTemplateViewController.storyboard; sourceTree = "<group>"; };
+		C1400BB5227B099300D10312 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +130,7 @@
 		C1400B382279C47E00D10312 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C1400B69227AECE100D10312 /* XcodeTemplate */,
 				C1400B3D2279C54000D10312 /* List */,
 				C1400B56227AD8B300D10312 /* Shared */,
 			);
@@ -151,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C1400B2D2279BF5B00D10312 /* Assets.xcassets */,
+				C1400BB5227B099300D10312 /* art.scnassets */,
 				C1400B5F227AE2DF00D10312 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -253,6 +261,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		C1400B69227AECE100D10312 /* XcodeTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C1400BB1227B090D00D10312 /* XcodeTemplateViewController.swift */,
+				C1400BB3227B092800D10312 /* XcodeTemplateViewController.storyboard */,
+			);
+			path = XcodeTemplate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,8 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */,
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
 				C1400B5D227AE2DF00D10312 /* Localizable.strings in Resources */,
+				C1400BB6227B099300D10312 /* art.scnassets in Resources */,
 				C1400B2E2279BF5B00D10312 /* Assets.xcassets in Resources */,
 				C1400B2C2279BF5A00D10312 /* ListViewController.storyboard in Resources */,
 				C1400B66227AE5F000D10312 /* ListCell.xib in Resources */,
@@ -385,6 +404,7 @@
 				C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */,
 				C1400B272279BF5A00D10312 /* AppDelegate.swift in Sources */,
 				C1400B53227AD10100D10312 /* ListItem.swift in Sources */,
+				C1400BB2227B090D00D10312 /* XcodeTemplateViewController.swift in Sources */,
 				C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

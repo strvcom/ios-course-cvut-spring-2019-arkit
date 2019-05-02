@@ -9,6 +9,6 @@
 import UIKit
 
 extension UIFont {
-    static let heading = UIFont.systemFont(ofSize: 24, weight: .bold)
+    static let heading = UIFont.systemFont(ofSize: 20, weight: .bold)
     static let title = UIFont.systemFont(ofSize: 16, weight: .semibold)
 }
