@@ -46,19 +46,19 @@ extension ListViewController: UITableViewDataSource {
 // MARK: Table view delegate
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = viewModel.item(for: indexPath)
-        coordinator.didSelect(item: item, in: self)
+        coordinator.didSelectItem(at: indexPath, in: self)
     }
 }
 
 // MARK: Setup
 private extension ListViewController {
     func setup() {
-        navigationItem.title = NSLocalizedString("EXAMPLES", comment: "")
+        navigationItem.title = viewModel.screenName
         
         view.backgroundColor = .appBackground
         tableView.backgroundColor = .appBackground
         tableView.separatorColor = .appSeparator
+        tableView.rowHeight = 40
         
         tableView.register(ListCell.nib, forCellReuseIdentifier: ListCell.identifier)
         tableView.delegate = self

@@ -9,7 +9,13 @@
 import Foundation
 
 protocol ListViewModeling: ViewModeling {
+    var screenName: String { get }
+    
     func numberOfSections() -> Int
     func numberOfRows(in section: Int) -> Int
-    func item(for indexPath: IndexPath) -> ListItem
+    func item(for indexPath: IndexPath) -> ListItemViewModel
+}
+
+protocol ListItemViewModel {
+    var name: String { get }
 }

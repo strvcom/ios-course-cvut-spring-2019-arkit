@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import QuickLook
 
-class RootCoordinator: NavigationCoordinating {
+class RootCoordinator: NSObject, NavigationCoordinating {
     private(set) var root: UINavigationController
     
-    init() {
+    private var usdzPreviewViewModel: USDZPreviewViewModel?
+    
+    override init() {
         root = ARDNavigationController()
+        
+        super.init()
     }
     
     func begin() -> UIViewController {
         let list = ListViewController.fromStoryboard
         list.coordinator = self
-        list.viewModel = ListViewModel()
+        list.viewModel = ExamplesViewModel(screenName: NSLocalizedString("EXAMPLES", comment: ""))
         
         root.setViewControllers([list], animated: false)
         
@@ -28,13 +33,51 @@ class RootCoordinator: NavigationCoordinating {
 
 // MARK: List Coordinating
 extension RootCoordinator: ListCoordinating {
-    func didSelect(item: ListItem, in controller: ListViewController) {
-        switch item {
-        case .template:
-            let template = XcodeTemplateViewController.fromStoryboard
-            root.pushViewController(template, animated: true)
+    func didSelectItem(at indexPath: IndexPath, in controller: ListViewController) {
+        switch controller.viewModel {
+        case let viewModel as ExamplesViewModel:
+            if let item = viewModel.item(for: indexPath) as? ExampleItem {
+                didSelect(example: item)
+            }
+        case let viewModel as USDZViewModel:
+            if let item = viewModel.item(for: indexPath) as? USDZModel {
+                didSelect(usdz: item)
+            }
         default:
             break
         }
+    }
+    
+    private func didSelect(example: ExampleItem) {
+        switch example {
+        case .template:
+            let template = XcodeTemplateViewController.fromStoryboard
+            root.pushViewController(template, animated: true)
+        case .usdz:
+            let list = ListViewController.fromStoryboard
+            list.coordinator = self
+            list.viewModel = USDZViewModel(screenName: NSLocalizedString("USDZ", comment: ""))
+            root.pushViewController(list, animated: true)
+        default:
+            break
+        }
+    }
+    
+    private func didSelect(usdz: USDZModel) {
+        let preview = QLPreviewController()
+        
+        let dataSource = USDZPreviewViewModel(usdz: usdz)
+        usdzPreviewViewModel = dataSource
+        preview.dataSource = dataSource
+        preview.delegate = self
+        
+        root.present(preview, animated: true, completion: nil)
+    }
+}
+
+// MARK: Quick Look delegate
+extension RootCoordinator: QLPreviewControllerDelegate {
+    func previewControllerDidDismiss(_ controller: QLPreviewController) {
+        usdzPreviewViewModel = nil
     }
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ListCoordinating: Coordinating {
-    func didSelect(item: ListItem, in controller: ListViewController)
+    func didSelectItem(at indexPath: IndexPath, in controller: ListViewController)
 }
