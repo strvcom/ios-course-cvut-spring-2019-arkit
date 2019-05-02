@@ -19,8 +19,8 @@
 		C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B48227ACE4C00D10312 /* ListCoordinatingProtocol.swift */; };
 		C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */; };
 		C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */; };
-		C1400B53227AD10100D10312 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B52227AD10100D10312 /* ListItem.swift */; };
-		C1400B55227AD15B00D10312 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B54227AD15B00D10312 /* ListViewModel.swift */; };
+		C1400B53227AD10100D10312 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B52227AD10100D10312 /* ExampleItem.swift */; };
+		C1400B55227AD15B00D10312 /* ExamplesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B54227AD15B00D10312 /* ExamplesViewModel.swift */; };
 		C1400B58227AD8D700D10312 /* ARDNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B57227AD8D700D10312 /* ARDNavigationController.swift */; };
 		C1400B5A227AD93F00D10312 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400B59227AD93F00D10312 /* UIColor+AppColors.swift */; };
 		C1400B5D227AE2DF00D10312 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1400B5F227AE2DF00D10312 /* Localizable.strings */; };
@@ -31,6 +31,13 @@
 		C1400BB2227B090D00D10312 /* XcodeTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400BB1227B090D00D10312 /* XcodeTemplateViewController.swift */; };
 		C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1400BB3227B092800D10312 /* XcodeTemplateViewController.storyboard */; };
 		C1400BB6227B099300D10312 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C1400BB5227B099300D10312 /* art.scnassets */; };
+		C1400BBC227B0CBE00D10312 /* stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C1400BB8227B0CBC00D10312 /* stratocaster.usdz */; };
+		C1400BBD227B0CBE00D10312 /* retrotv.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C1400BB9227B0CBD00D10312 /* retrotv.usdz */; };
+		C1400BBE227B0CBE00D10312 /* tulip.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C1400BBA227B0CBE00D10312 /* tulip.usdz */; };
+		C1400BBF227B0CBE00D10312 /* wheelbarrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C1400BBB227B0CBE00D10312 /* wheelbarrow.usdz */; };
+		C1400BCA227B0F7800D10312 /* USDZModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400BC9227B0F7800D10312 /* USDZModel.swift */; };
+		C1400BCC227B119D00D10312 /* USDZViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400BCB227B119D00D10312 /* USDZViewModel.swift */; };
+		C1400BCF227B1C3A00D10312 /* USDZPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400BCE227B1C3A00D10312 /* USDZPreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +56,8 @@
 		C1400B48227ACE4C00D10312 /* ListCoordinatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatingProtocol.swift; sourceTree = "<group>"; };
 		C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelingProtocol.swift; sourceTree = "<group>"; };
 		C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelingProtocol.swift; sourceTree = "<group>"; };
-		C1400B52227AD10100D10312 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
-		C1400B54227AD15B00D10312 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C1400B52227AD10100D10312 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
+		C1400B54227AD15B00D10312 /* ExamplesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewModel.swift; sourceTree = "<group>"; };
 		C1400B57227AD8D700D10312 /* ARDNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDNavigationController.swift; sourceTree = "<group>"; };
 		C1400B59227AD93F00D10312 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		C1400B5E227AE2DF00D10312 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -61,6 +68,13 @@
 		C1400BB1227B090D00D10312 /* XcodeTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeTemplateViewController.swift; sourceTree = "<group>"; };
 		C1400BB3227B092800D10312 /* XcodeTemplateViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XcodeTemplateViewController.storyboard; sourceTree = "<group>"; };
 		C1400BB5227B099300D10312 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		C1400BB8227B0CBC00D10312 /* stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = stratocaster.usdz; sourceTree = "<group>"; };
+		C1400BB9227B0CBD00D10312 /* retrotv.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = retrotv.usdz; sourceTree = "<group>"; };
+		C1400BBA227B0CBE00D10312 /* tulip.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = tulip.usdz; sourceTree = "<group>"; };
+		C1400BBB227B0CBE00D10312 /* wheelbarrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = wheelbarrow.usdz; sourceTree = "<group>"; };
+		C1400BC9227B0F7800D10312 /* USDZModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDZModel.swift; sourceTree = "<group>"; };
+		C1400BCB227B119D00D10312 /* USDZViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDZViewModel.swift; sourceTree = "<group>"; };
+		C1400BCE227B1C3A00D10312 /* USDZPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDZPreviewViewModel.swift; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +171,7 @@
 		C1400B3B2279C4B800D10312 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C1400BB7227B0C9B00D10312 /* USDZModels */,
 				C1400B2D2279BF5B00D10312 /* Assets.xcassets */,
 				C1400BB5227B099300D10312 /* art.scnassets */,
 				C1400B5F227AE2DF00D10312 /* Localizable.strings */,
@@ -215,6 +230,7 @@
 			children = (
 				C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */,
 				C1400B4F227AD07700D10312 /* List */,
+				C1400BCD227B1C2300D10312 /* USDZ */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,7 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				C1400B4D227AD06400D10312 /* ListViewModelingProtocol.swift */,
-				C1400B54227AD15B00D10312 /* ListViewModel.swift */,
+				C1400B54227AD15B00D10312 /* ExamplesViewModel.swift */,
+				C1400BCB227B119D00D10312 /* USDZViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -231,17 +248,18 @@
 		C1400B50227AD0E200D10312 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C1400B51227AD0EF00D10312 /* List */,
+				C1400BC8227B0F6500D10312 /* USDZ */,
+				C1400B51227AD0EF00D10312 /* Examples */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C1400B51227AD0EF00D10312 /* List */ = {
+		C1400B51227AD0EF00D10312 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				C1400B52227AD10100D10312 /* ListItem.swift */,
+				C1400B52227AD10100D10312 /* ExampleItem.swift */,
 			);
-			path = List;
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		C1400B56227AD8B300D10312 /* Shared */ = {
@@ -268,6 +286,33 @@
 				C1400BB3227B092800D10312 /* XcodeTemplateViewController.storyboard */,
 			);
 			path = XcodeTemplate;
+			sourceTree = "<group>";
+		};
+		C1400BB7227B0C9B00D10312 /* USDZModels */ = {
+			isa = PBXGroup;
+			children = (
+				C1400BB9227B0CBD00D10312 /* retrotv.usdz */,
+				C1400BB8227B0CBC00D10312 /* stratocaster.usdz */,
+				C1400BBA227B0CBE00D10312 /* tulip.usdz */,
+				C1400BBB227B0CBE00D10312 /* wheelbarrow.usdz */,
+			);
+			path = USDZModels;
+			sourceTree = "<group>";
+		};
+		C1400BC8227B0F6500D10312 /* USDZ */ = {
+			isa = PBXGroup;
+			children = (
+				C1400BC9227B0F7800D10312 /* USDZModel.swift */,
+			);
+			path = USDZ;
+			sourceTree = "<group>";
+		};
+		C1400BCD227B1C2300D10312 /* USDZ */ = {
+			isa = PBXGroup;
+			children = (
+				C1400BCE227B1C3A00D10312 /* USDZPreviewViewModel.swift */,
+			);
+			path = USDZ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,13 +375,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1400BBF227B0CBE00D10312 /* wheelbarrow.usdz in Resources */,
 				C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */,
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
+				C1400BBE227B0CBE00D10312 /* tulip.usdz in Resources */,
 				C1400B5D227AE2DF00D10312 /* Localizable.strings in Resources */,
 				C1400BB6227B099300D10312 /* art.scnassets in Resources */,
+				C1400BBC227B0CBE00D10312 /* stratocaster.usdz in Resources */,
 				C1400B2E2279BF5B00D10312 /* Assets.xcassets in Resources */,
 				C1400B2C2279BF5A00D10312 /* ListViewController.storyboard in Resources */,
 				C1400B66227AE5F000D10312 /* ListCell.xib in Resources */,
+				C1400BBD227B0CBE00D10312 /* retrotv.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1400B55227AD15B00D10312 /* ListViewModel.swift in Sources */,
+				C1400BCA227B0F7800D10312 /* USDZModel.swift in Sources */,
+				C1400B55227AD15B00D10312 /* ExamplesViewModel.swift in Sources */,
 				C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */,
 				C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */,
 				C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */,
@@ -403,7 +453,9 @@
 				C1400B61227AE3FC00D10312 /* UIFont+AppFonts.swift in Sources */,
 				C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */,
 				C1400B272279BF5A00D10312 /* AppDelegate.swift in Sources */,
-				C1400B53227AD10100D10312 /* ListItem.swift in Sources */,
+				C1400BCF227B1C3A00D10312 /* USDZPreviewViewModel.swift in Sources */,
+				C1400BCC227B119D00D10312 /* USDZViewModel.swift in Sources */,
+				C1400B53227AD10100D10312 /* ExampleItem.swift in Sources */,
 				C1400BB2227B090D00D10312 /* XcodeTemplateViewController.swift in Sources */,
 				C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */,
 			);
