@@ -58,6 +58,9 @@ extension RootCoordinator: ListCoordinating {
             list.coordinator = self
             list.viewModel = USDZViewModel(screenName: NSLocalizedString("USDZ", comment: ""))
             root.pushViewController(list, animated: true)
+        case .saturn:
+            let saturn = SaturnViewController.fromStoryboard
+            root.pushViewController(saturn, animated: true)
         default:
             break
         }
