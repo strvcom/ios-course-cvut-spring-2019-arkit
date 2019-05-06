@@ -22,10 +22,33 @@ class SaturnViewController: UIViewController, NibNameIdentifiable {
     }
 }
 
+// MARK: ARSession delegate
+extension SaturnViewController: ARSessionDelegate {
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        print("Session error")
+    }
+    
+    func sessionWasInterrupted(_ session: ARSession) {
+        print("Session was interrupted")
+    }
+    
+    func sessionInterruptionEnded(_ session: ARSession) {
+        print("Session interruption ended")
+        
+        resetSession()
+    }
+    
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+        print(camera.trackingState)
+    }
+}
+
 // MARK: Setup
 private extension SaturnViewController {
     func setup() {
         navigationItem.title = NSLocalizedString("SATURN", comment: "")
+        
+        sceneView.session.delegate = self
         
         loadScene()
         
