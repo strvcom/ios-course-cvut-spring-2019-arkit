@@ -61,6 +61,10 @@ extension RootCoordinator: ListCoordinating {
         case .saturn:
             let saturn = SaturnViewController.fromStoryboard
             root.pushViewController(saturn, animated: true)
+        case .dice:
+            let dice = DiceViewController.fromStoryboard
+            dice.viewModel = DiceViewModel()
+            root.pushViewController(dice, animated: true)
         default:
             break
         }

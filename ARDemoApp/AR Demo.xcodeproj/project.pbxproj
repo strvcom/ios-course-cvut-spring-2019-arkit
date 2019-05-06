@@ -41,6 +41,11 @@
 		C179DCE32280125B0082728A /* SaturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCE22280125B0082728A /* SaturnViewController.swift */; };
 		C179DCE5228012680082728A /* SaturnViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C179DCE4228012680082728A /* SaturnViewController.storyboard */; };
 		C179DCE9228016610082728A /* saturn.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C179DCE8228016610082728A /* saturn.scnassets */; };
+		C179DCEC228036320082728A /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCEB228036320082728A /* DiceViewController.swift */; };
+		C179DCEE2280364E0082728A /* DiceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C179DCED2280364E0082728A /* DiceViewController.storyboard */; };
+		C179DCF1228036FF0082728A /* ARSceneManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF0228036FF0082728A /* ARSceneManaging.swift */; };
+		C179DCF422803B570082728A /* DiceViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF322803B570082728A /* DiceViewModeling.swift */; };
+		C179DCF622803B750082728A /* DiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF522803B750082728A /* DiceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +86,11 @@
 		C179DCE22280125B0082728A /* SaturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturnViewController.swift; sourceTree = "<group>"; };
 		C179DCE4228012680082728A /* SaturnViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaturnViewController.storyboard; sourceTree = "<group>"; };
 		C179DCE8228016610082728A /* saturn.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = saturn.scnassets; sourceTree = "<group>"; };
+		C179DCEB228036320082728A /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
+		C179DCED2280364E0082728A /* DiceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiceViewController.storyboard; sourceTree = "<group>"; };
+		C179DCF0228036FF0082728A /* ARSceneManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneManaging.swift; sourceTree = "<group>"; };
+		C179DCF322803B570082728A /* DiceViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModeling.swift; sourceTree = "<group>"; };
+		C179DCF522803B750082728A /* DiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModel.swift; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +160,7 @@
 		C1400B382279C47E00D10312 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C179DCEA228036130082728A /* Dice */,
 				C179DCE12280123E0082728A /* Saturn */,
 				C1400B69227AECE100D10312 /* XcodeTemplate */,
 				C1400B3D2279C54000D10312 /* List */,
@@ -206,6 +217,7 @@
 		C1400B3F227ACA0000D10312 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C179DCEF228036E40082728A /* Protocols */,
 				C1400B45227ACAD400D10312 /* Extensions */,
 			);
 			path = Utils;
@@ -224,7 +236,6 @@
 		C1400B45227ACAD400D10312 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C1400B46227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift */,
 				C1400B59227AD93F00D10312 /* UIColor+AppColors.swift */,
 				C1400B60227AE3FC00D10312 /* UIFont+AppFonts.swift */,
 				C1400B67227AE78900D10312 /* UITableView+Dequeueing.swift */,
@@ -238,6 +249,7 @@
 				C1400B4B227AD02700D10312 /* ViewModelingProtocol.swift */,
 				C1400B4F227AD07700D10312 /* List */,
 				C1400BCD227B1C2300D10312 /* USDZ */,
+				C179DCF222803B3A0082728A /* Dice */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -348,6 +360,33 @@
 			path = ImageAssets;
 			sourceTree = "<group>";
 		};
+		C179DCEA228036130082728A /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				C179DCEB228036320082728A /* DiceViewController.swift */,
+				C179DCED2280364E0082728A /* DiceViewController.storyboard */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
+		C179DCEF228036E40082728A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B46227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift */,
+				C179DCF0228036FF0082728A /* ARSceneManaging.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C179DCF222803B3A0082728A /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				C179DCF322803B570082728A /* DiceViewModeling.swift */,
+				C179DCF522803B750082728A /* DiceViewModel.swift */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C179DCEE2280364E0082728A /* DiceViewController.storyboard in Resources */,
 				C1400BBF227B0CBE00D10312 /* wheelbarrow.usdz in Resources */,
 				C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */,
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
@@ -484,14 +524,18 @@
 				C1400B58227AD8D700D10312 /* ARDNavigationController.swift in Sources */,
 				C1400B5A227AD93F00D10312 /* UIColor+AppColors.swift in Sources */,
 				C1400B292279BF5A00D10312 /* ListViewController.swift in Sources */,
+				C179DCF422803B570082728A /* DiceViewModeling.swift in Sources */,
+				C179DCEC228036320082728A /* DiceViewController.swift in Sources */,
 				C1400B42227ACA2500D10312 /* CoordinatingProtocol.swift in Sources */,
 				C1400B61227AE3FC00D10312 /* UIFont+AppFonts.swift in Sources */,
 				C1400B49227ACE4C00D10312 /* ListCoordinatingProtocol.swift in Sources */,
+				C179DCF622803B750082728A /* DiceViewModel.swift in Sources */,
 				C179DCE32280125B0082728A /* SaturnViewController.swift in Sources */,
 				C1400B272279BF5A00D10312 /* AppDelegate.swift in Sources */,
 				C1400BCF227B1C3A00D10312 /* USDZPreviewViewModel.swift in Sources */,
 				C1400BCC227B119D00D10312 /* USDZViewModel.swift in Sources */,
 				C1400B53227AD10100D10312 /* ExampleItem.swift in Sources */,
+				C179DCF1228036FF0082728A /* ARSceneManaging.swift in Sources */,
 				C1400BB2227B090D00D10312 /* XcodeTemplateViewController.swift in Sources */,
 				C1400B4E227AD06400D10312 /* ListViewModelingProtocol.swift in Sources */,
 			);
