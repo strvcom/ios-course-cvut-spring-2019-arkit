@@ -11,7 +11,7 @@ import Foundation
 enum ExampleItem: CaseIterable {
     case template
     case usdz
-    case earth
+    case saturn
     case dice
     case face
 }

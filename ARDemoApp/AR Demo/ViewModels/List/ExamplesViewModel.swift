@@ -36,7 +36,7 @@ extension ExampleItem: ListItemViewModel {
             return NSLocalizedString("XCODE_TEMPLATE", comment: "")
         case .usdz:
             return NSLocalizedString("USDZ", comment: "")
-        case .earth:
+        case .saturn:
             return NSLocalizedString("SIMPLE_OBJECT", comment: "")
         case .dice:
             return NSLocalizedString("DICE_GAME", comment: "")
