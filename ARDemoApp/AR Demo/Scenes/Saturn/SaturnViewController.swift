@@ -49,6 +49,7 @@ private extension SaturnViewController {
         navigationItem.title = NSLocalizedString("SATURN", comment: "")
         
         sceneView.session.delegate = self
+        sceneView.debugOptions = [.showWorldOrigin, .showWireframe, .showFeaturePoints, .showBoundingBoxes]
         
         loadScene()
         
