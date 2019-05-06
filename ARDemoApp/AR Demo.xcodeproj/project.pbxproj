@@ -40,6 +40,7 @@
 		C1400BCF227B1C3A00D10312 /* USDZPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1400BCE227B1C3A00D10312 /* USDZPreviewViewModel.swift */; };
 		C179DCE32280125B0082728A /* SaturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCE22280125B0082728A /* SaturnViewController.swift */; };
 		C179DCE5228012680082728A /* SaturnViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C179DCE4228012680082728A /* SaturnViewController.storyboard */; };
+		C179DCE9228016610082728A /* saturn.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C179DCE8228016610082728A /* saturn.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		C1400BCE227B1C3A00D10312 /* USDZPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDZPreviewViewModel.swift; sourceTree = "<group>"; };
 		C179DCE22280125B0082728A /* SaturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturnViewController.swift; sourceTree = "<group>"; };
 		C179DCE4228012680082728A /* SaturnViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaturnViewController.storyboard; sourceTree = "<group>"; };
+		C179DCE8228016610082728A /* saturn.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = saturn.scnassets; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,9 +178,9 @@
 		C1400B3B2279C4B800D10312 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C179DCE7228015DD0082728A /* ImageAssets */,
+				C179DCE6228015CD0082728A /* SceneAssets */,
 				C1400BB7227B0C9B00D10312 /* USDZModels */,
-				C1400B2D2279BF5B00D10312 /* Assets.xcassets */,
-				C1400BB5227B099300D10312 /* art.scnassets */,
 				C1400B5F227AE2DF00D10312 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -329,6 +331,23 @@
 			path = Saturn;
 			sourceTree = "<group>";
 		};
+		C179DCE6228015CD0082728A /* SceneAssets */ = {
+			isa = PBXGroup;
+			children = (
+				C1400BB5227B099300D10312 /* art.scnassets */,
+				C179DCE8228016610082728A /* saturn.scnassets */,
+			);
+			path = SceneAssets;
+			sourceTree = "<group>";
+		};
+		C179DCE7228015DD0082728A /* ImageAssets */ = {
+			isa = PBXGroup;
+			children = (
+				C1400B2D2279BF5B00D10312 /* Assets.xcassets */,
+			);
+			path = ImageAssets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +411,7 @@
 				C1400BBF227B0CBE00D10312 /* wheelbarrow.usdz in Resources */,
 				C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */,
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
+				C179DCE9228016610082728A /* saturn.scnassets in Resources */,
 				C1400BBE227B0CBE00D10312 /* tulip.usdz in Resources */,
 				C1400B5D227AE2DF00D10312 /* Localizable.strings in Resources */,
 				C1400BB6227B099300D10312 /* art.scnassets in Resources */,

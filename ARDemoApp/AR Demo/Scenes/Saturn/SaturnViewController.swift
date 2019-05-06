@@ -13,6 +13,8 @@ import SceneKit
 class SaturnViewController: UIViewController, NibNameIdentifiable {
     @IBOutlet private weak var sceneView: ARSCNView!
     
+    private let sceneName = "saturn.scnassets/saturn.scn"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +27,15 @@ private extension SaturnViewController {
     func setup() {
         navigationItem.title = NSLocalizedString("SATURN", comment: "")
         
+        loadScene()
+        
         resetSession()
+    }
+    
+    func loadScene() {
+        if let scene = SCNScene(named: sceneName) {
+            sceneView.scene = scene
+        }
     }
     
     func resetSession() {
