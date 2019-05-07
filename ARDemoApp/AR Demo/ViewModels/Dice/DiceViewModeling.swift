@@ -6,6 +6,11 @@
 //  Copyright © 2019 Jan Schwarz. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import ARKit
+import SceneKit
 
-protocol DiceViewModeling {}
+protocol DiceViewModeling {
+    func createPlaneNode(for anchor: ARPlaneAnchor, with color: UIColor) -> SCNNode
+    func update(planeNode: SCNNode, for anchor: ARPlaneAnchor)
+}
