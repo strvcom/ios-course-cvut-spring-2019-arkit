@@ -22,24 +22,14 @@ class SaturnViewController: UIViewController, NibNameIdentifiable {
     }
 }
 
-// MARK: ARSession delegate
-extension SaturnViewController: ARSessionDelegate {
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        print("Session error")
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        print("Session was interrupted")
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        print("Session interruption ended")
+// MARK: AR Scene managing
+extension SaturnViewController: ARSceneManaging {
+    func resetSession() {
+        let configuration = ARWorldTrackingConfiguration()
         
-        resetSession()
-    }
-    
-    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        print(camera.trackingState)
+        configuration.worldAlignment = .gravity
+        
+        sceneView.session.run(configuration, options: [.resetTracking])
     }
 }
 
@@ -61,12 +51,5 @@ private extension SaturnViewController {
             sceneView.scene = scene
         }
     }
-    
-    func resetSession() {
-        let configuration = ARWorldTrackingConfiguration()
-        
-        configuration.worldAlignment = .gravity
-        
-        sceneView.session.run(configuration, options: [.resetTracking])
-    }
+
 }
