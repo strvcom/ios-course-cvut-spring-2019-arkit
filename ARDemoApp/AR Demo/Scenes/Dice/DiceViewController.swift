@@ -28,10 +28,16 @@ class DiceViewController: UIViewController, NibNameIdentifiable {
 // MARK: Actions
 private extension DiceViewController {
     @objc func didTapOnResetButton() {
+        removeDiceFromScene()
         resetSession()
     }
     
     @objc func didTapOnScene(_ recognizer: UITapGestureRecognizer) {
+        guard let frame = self.sceneView.session.currentFrame else {
+            print("Unable to get current frame")
+            return
+        }
+        
         let touch = recognizer.location(in: sceneView)
         let hits = sceneView.hitTest(touch, types: .existingPlaneUsingExtent)
         
@@ -40,10 +46,24 @@ private extension DiceViewController {
             return
         }
         
+        stopPlaneDetection()
+        removeDiceFromScene()
+        
         let cube = viewModel.createCube(of: 0.05)
+        
+        let deviceTransform = SCNMatrix4(frame.camera.transform)
+        let hitTrannsform = SCNMatrix4(hit.worldTransform)
 
-        let height = (cube.geometry as? SCNBox)?.height ?? 0
-        cube.position = SCNVector3(hit.worldTransform.columns.3.x, hit.worldTransform.columns.3.y + Float(height/2), hit.worldTransform.columns.3.z)
+        cube.position = SCNVector3(deviceTransform.m41, deviceTransform.m42, deviceTransform.m43)
+        cube.eulerAngles = SCNVector3(Double.random(in: 0...Double.pi), Double.random(in: 0...Double.pi), Double.random(in: 0...Double.pi))
+        
+        let throwDirection = SCNVector3(
+            hitTrannsform.m41 - deviceTransform.m41,
+            hitTrannsform.m42 - deviceTransform.m42,
+            hitTrannsform.m43 - deviceTransform.m43
+        )
+        cube.physicsBody?.resetTransform()
+        cube.physicsBody?.applyForce(throwDirection, asImpulse: true)
         
         sceneView.scene.rootNode.addChildNode(cube)
     }
@@ -58,6 +78,21 @@ extension DiceViewController: ARSceneManaging {
         configuration.planeDetection = .horizontal
         
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+    
+    func stopPlaneDetection() {
+        let configuration = ARWorldTrackingConfiguration()
+        
+        configuration.worldAlignment = .gravity
+        configuration.planeDetection = []
+        
+        sceneView.session.run(configuration)
+    }
+    
+    func removeDiceFromScene() {
+        for node in sceneView.scene.rootNode.childNodes where node.name == viewModel.diceNodeName {
+            node.removeFromParentNode()
+        }
     }
 }
 

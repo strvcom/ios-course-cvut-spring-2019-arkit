@@ -11,6 +11,8 @@ import ARKit
 import SceneKit
 
 protocol DiceViewModeling {
+    var diceNodeName: String { get }
+    
     func createPlaneNode(for anchor: ARPlaneAnchor, with color: UIColor) -> SCNNode
     func update(planeNode: SCNNode, for anchor: ARPlaneAnchor)
     func createCube(of size: CGFloat) -> SCNNode
