@@ -46,6 +46,7 @@
 		C179DCF1228036FF0082728A /* ARSceneManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF0228036FF0082728A /* ARSceneManaging.swift */; };
 		C179DCF422803B570082728A /* DiceViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF322803B570082728A /* DiceViewModeling.swift */; };
 		C179DCF622803B750082728A /* DiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF522803B750082728A /* DiceViewModel.swift */; };
+		C179DCF822817BE20082728A /* dice.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C179DCF722817BE20082728A /* dice.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		C179DCF0228036FF0082728A /* ARSceneManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneManaging.swift; sourceTree = "<group>"; };
 		C179DCF322803B570082728A /* DiceViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModeling.swift; sourceTree = "<group>"; };
 		C179DCF522803B750082728A /* DiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModel.swift; sourceTree = "<group>"; };
+		C179DCF722817BE20082728A /* dice.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = dice.scnassets; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,6 +350,7 @@
 			children = (
 				C1400BB5227B099300D10312 /* art.scnassets */,
 				C179DCE8228016610082728A /* saturn.scnassets */,
+				C179DCF722817BE20082728A /* dice.scnassets */,
 			);
 			path = SceneAssets;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				C1400B2E2279BF5B00D10312 /* Assets.xcassets in Resources */,
 				C1400B2C2279BF5A00D10312 /* ListViewController.storyboard in Resources */,
 				C1400B66227AE5F000D10312 /* ListCell.xib in Resources */,
+				C179DCF822817BE20082728A /* dice.scnassets in Resources */,
 				C179DCE5228012680082728A /* SaturnViewController.storyboard in Resources */,
 				C1400BBD227B0CBE00D10312 /* retrotv.usdz in Resources */,
 			);

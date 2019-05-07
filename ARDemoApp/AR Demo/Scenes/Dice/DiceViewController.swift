@@ -30,6 +30,23 @@ private extension DiceViewController {
     @objc func didTapOnResetButton() {
         resetSession()
     }
+    
+    @objc func didTapOnScene(_ recognizer: UITapGestureRecognizer) {
+        let touch = recognizer.location(in: sceneView)
+        let hits = sceneView.hitTest(touch, types: .existingPlaneUsingExtent)
+        
+        guard let hit = hits.first else {
+            print("Hit test didn't find any plane")
+            return
+        }
+        
+        let cube = viewModel.createCube(of: 0.05)
+
+        let height = (cube.geometry as? SCNBox)?.height ?? 0
+        cube.position = SCNVector3(hit.worldTransform.columns.3.x, hit.worldTransform.columns.3.y + Float(height/2), hit.worldTransform.columns.3.z)
+        
+        sceneView.scene.rootNode.addChildNode(cube)
+    }
 }
 
 // MARK: AR scene managing
@@ -81,6 +98,9 @@ private extension DiceViewController {
     func setup() {
         navigationItem.title = NSLocalizedString("DICE_GAME", comment: "")
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("RESET", comment: ""), style: .plain, target: self, action: #selector(self.didTapOnResetButton))
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.didTapOnScene(_:)))
+        sceneView.addGestureRecognizer(tap)
         
         sceneView.delegate = self
 

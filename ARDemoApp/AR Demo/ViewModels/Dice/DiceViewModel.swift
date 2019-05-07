@@ -11,6 +11,9 @@ import ARKit
 import SceneKit
 
 class DiceViewModel: DiceViewModeling {
+    private let diceMaterialPath = "dice.scnassets/Materials/Cube"
+    private let diceNodeName = "dice"
+    
     func createPlaneNode(for anchor: ARPlaneAnchor, with color: UIColor) -> SCNNode {
         let plane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
         
@@ -35,6 +38,22 @@ class DiceViewModel: DiceViewModeling {
         plane.height = CGFloat(anchor.extent.z)
         
         positionAndTransform(planeNode: planeNode, for: anchor)
+    }
+    
+    func createCube(of size: CGFloat) -> SCNNode {
+        let size: CGFloat = 0.1
+        let box = SCNBox(width: size, height: size, length: size, chamferRadius: 0)
+        
+        let materials = Array(1...6).map({ index -> SCNMaterial in
+            let material = SCNMaterial()
+            material.diffuse.contents = "\(self.diceMaterialPath)\(index).png"
+            return material
+        })
+        box.materials = materials
+        
+        let node = SCNNode(geometry: box)
+        
+        return node
     }
 }
 
