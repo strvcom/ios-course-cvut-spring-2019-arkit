@@ -16,6 +16,8 @@ class FaceViewController: UIViewController, NibNameIdentifiable {
     // swiftlint:disable:next implicitly_unwrapped_optional
     var viewModel: FaceViewModeling!
     
+    private var faceMask: FaceMask?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +66,18 @@ extension FaceViewController: ARSCNViewDelegate {
         }
         
         DispatchQueue.main.async {
+            self.faceMask = mask
             node.addChildNode(mask)
+        }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let anchor = anchor as? ARFaceAnchor, let mask = faceMask else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            mask.update(with: anchor)
         }
     }
     

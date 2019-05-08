@@ -10,6 +10,10 @@ import ARKit
 import SceneKit
 
 class FaceMask: SCNNode {
+    var faceGeometry: ARSCNFaceGeometry? {
+        return geometry as? ARSCNFaceGeometry
+    }
+    
     init(geometry: ARSCNFaceGeometry, color: UIColor) {
         super.init()
         
@@ -22,5 +26,9 @@ class FaceMask: SCNNode {
     
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+    
+    func update(with anchor: ARFaceAnchor) {
+        faceGeometry?.update(from: anchor.geometry)
     }
 }
