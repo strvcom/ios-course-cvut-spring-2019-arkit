@@ -51,6 +51,7 @@
 		C179DCFD2282C02F0082728A /* FaceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C179DCFC2282C02F0082728A /* FaceViewController.storyboard */; };
 		C179DD002282C20C0082728A /* FaceViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCFF2282C20C0082728A /* FaceViewModeling.swift */; };
 		C179DD022282C2250082728A /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD012282C2250082728A /* FaceViewModel.swift */; };
+		C179DD052282C49C0082728A /* FaceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD042282C49C0082728A /* FaceMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		C179DCFC2282C02F0082728A /* FaceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FaceViewController.storyboard; sourceTree = "<group>"; };
 		C179DCFF2282C20C0082728A /* FaceViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModeling.swift; sourceTree = "<group>"; };
 		C179DD012282C2250082728A /* FaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
+		C179DD042282C49C0082728A /* FaceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMask.swift; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +281,7 @@
 		C1400B50227AD0E200D10312 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C179DD032282C48A0082728A /* Face */,
 				C1400BC8227B0F6500D10312 /* USDZ */,
 				C1400B51227AD0EF00D10312 /* Examples */,
 			);
@@ -418,6 +421,14 @@
 			path = Face;
 			sourceTree = "<group>";
 		};
+		C179DD032282C48A0082728A /* Face */ = {
+			isa = PBXGroup;
+			children = (
+				C179DD042282C49C0082728A /* FaceMask.swift */,
+			);
+			path = Face;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -551,6 +562,7 @@
 				C1400B55227AD15B00D10312 /* ExamplesViewModel.swift in Sources */,
 				C179DCFB2282C0010082728A /* FaceViewController.swift in Sources */,
 				C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */,
+				C179DD052282C49C0082728A /* FaceMask.swift in Sources */,
 				C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */,
 				C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */,
 				C1400B65227AE5F000D10312 /* ListCell.swift in Sources */,

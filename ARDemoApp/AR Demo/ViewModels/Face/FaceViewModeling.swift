@@ -6,6 +6,8 @@
 //  Copyright © 2019 Jan Schwarz. All rights reserved.
 //
 
-import Foundation
+import ARKit
 
-protocol FaceViewModeling {}
+protocol FaceViewModeling {
+    func createFaceMask(with device: MTLDevice, color: UIColor) -> FaceMask?
+}
