@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  AR Demo
+
+  Created by Jan on 02/05/2019.
+  Copyright © 2019 Jan Schwarz. All rights reserved.
+*/
+
+"EXAMPLES" = "Examples";
+"XCODE_TEMPLATE" = "Xcode template";
+"USDZ" = "USDZ";
+"SIMPLE_OBJECT" = "Simple object";
+"DICE_GAME" = "Dice game";
+"FACE_TRACKING" = "Face tracking";
+"FLOWER" = "Flower";
+"GUITAR" = "Guitar";
+"TV" = "TV";
+"WHEEL_BARROW" = "Wheel barrow";
+"SATURN" = "Saturn";
+"RESET" = "Reset";
+"LOOP" = "Loop";
