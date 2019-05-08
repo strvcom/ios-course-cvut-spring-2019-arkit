@@ -47,6 +47,10 @@
 		C179DCF422803B570082728A /* DiceViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF322803B570082728A /* DiceViewModeling.swift */; };
 		C179DCF622803B750082728A /* DiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCF522803B750082728A /* DiceViewModel.swift */; };
 		C179DCF822817BE20082728A /* dice.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C179DCF722817BE20082728A /* dice.scnassets */; };
+		C179DCFB2282C0010082728A /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCFA2282C0010082728A /* FaceViewController.swift */; };
+		C179DCFD2282C02F0082728A /* FaceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C179DCFC2282C02F0082728A /* FaceViewController.storyboard */; };
+		C179DD002282C20C0082728A /* FaceViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCFF2282C20C0082728A /* FaceViewModeling.swift */; };
+		C179DD022282C2250082728A /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD012282C2250082728A /* FaceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,10 @@
 		C179DCF322803B570082728A /* DiceViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModeling.swift; sourceTree = "<group>"; };
 		C179DCF522803B750082728A /* DiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModel.swift; sourceTree = "<group>"; };
 		C179DCF722817BE20082728A /* dice.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = dice.scnassets; sourceTree = "<group>"; };
+		C179DCFA2282C0010082728A /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		C179DCFC2282C02F0082728A /* FaceViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FaceViewController.storyboard; sourceTree = "<group>"; };
+		C179DCFF2282C20C0082728A /* FaceViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModeling.swift; sourceTree = "<group>"; };
+		C179DD012282C2250082728A /* FaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +170,7 @@
 		C1400B382279C47E00D10312 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C179DCF92282BFEC0082728A /* Face */,
 				C179DCEA228036130082728A /* Dice */,
 				C179DCE12280123E0082728A /* Saturn */,
 				C1400B69227AECE100D10312 /* XcodeTemplate */,
@@ -252,6 +261,7 @@
 				C1400B4F227AD07700D10312 /* List */,
 				C1400BCD227B1C2300D10312 /* USDZ */,
 				C179DCF222803B3A0082728A /* Dice */,
+				C179DCFE2282C1EC0082728A /* Face */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -390,6 +400,24 @@
 			path = Dice;
 			sourceTree = "<group>";
 		};
+		C179DCF92282BFEC0082728A /* Face */ = {
+			isa = PBXGroup;
+			children = (
+				C179DCFA2282C0010082728A /* FaceViewController.swift */,
+				C179DCFC2282C02F0082728A /* FaceViewController.storyboard */,
+			);
+			path = Face;
+			sourceTree = "<group>";
+		};
+		C179DCFE2282C1EC0082728A /* Face */ = {
+			isa = PBXGroup;
+			children = (
+				C179DCFF2282C20C0082728A /* FaceViewModeling.swift */,
+				C179DD012282C2250082728A /* FaceViewModel.swift */,
+			);
+			path = Face;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,6 +480,7 @@
 			files = (
 				C179DCEE2280364E0082728A /* DiceViewController.storyboard in Resources */,
 				C1400BBF227B0CBE00D10312 /* wheelbarrow.usdz in Resources */,
+				C179DCFD2282C02F0082728A /* FaceViewController.storyboard in Resources */,
 				C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */,
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
 				C179DCE9228016610082728A /* saturn.scnassets in Resources */,
@@ -520,15 +549,18 @@
 			files = (
 				C1400BCA227B0F7800D10312 /* USDZModel.swift in Sources */,
 				C1400B55227AD15B00D10312 /* ExamplesViewModel.swift in Sources */,
+				C179DCFB2282C0010082728A /* FaceViewController.swift in Sources */,
 				C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */,
 				C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */,
 				C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */,
 				C1400B65227AE5F000D10312 /* ListCell.swift in Sources */,
 				C1400B44227ACA9C00D10312 /* RootCoordinator.swift in Sources */,
+				C179DD002282C20C0082728A /* FaceViewModeling.swift in Sources */,
 				C1400B58227AD8D700D10312 /* ARDNavigationController.swift in Sources */,
 				C1400B5A227AD93F00D10312 /* UIColor+AppColors.swift in Sources */,
 				C1400B292279BF5A00D10312 /* ListViewController.swift in Sources */,
 				C179DCF422803B570082728A /* DiceViewModeling.swift in Sources */,
+				C179DD022282C2250082728A /* FaceViewModel.swift in Sources */,
 				C179DCEC228036320082728A /* DiceViewController.swift in Sources */,
 				C1400B42227ACA2500D10312 /* CoordinatingProtocol.swift in Sources */,
 				C1400B61227AE3FC00D10312 /* UIFont+AppFonts.swift in Sources */,
