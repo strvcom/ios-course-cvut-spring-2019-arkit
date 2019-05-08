@@ -53,6 +53,7 @@
 		C179DD022282C2250082728A /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD012282C2250082728A /* FaceViewModel.swift */; };
 		C179DD052282C49C0082728A /* FaceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD042282C49C0082728A /* FaceMask.swift */; };
 		C179DD092282F9050082728A /* face.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C179DD082282F9050082728A /* face.scnassets */; };
+		C179DD072282D5FC0082728A /* EyeballMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD062282D5FC0082728A /* EyeballMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		C179DD012282C2250082728A /* FaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
 		C179DD042282C49C0082728A /* FaceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMask.swift; sourceTree = "<group>"; };
 		C179DD082282F9050082728A /* face.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = face.scnassets; sourceTree = "<group>"; };
+		C179DD062282D5FC0082728A /* EyeballMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeballMask.swift; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				C179DD042282C49C0082728A /* FaceMask.swift */,
+				C179DD062282D5FC0082728A /* EyeballMask.swift */,
 			);
 			path = Face;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				C1400B47227ACAFD00D10312 /* NibNameIdentifiableProtocol.swift in Sources */,
 				C179DD052282C49C0082728A /* FaceMask.swift in Sources */,
 				C1400B4C227AD02700D10312 /* ViewModelingProtocol.swift in Sources */,
+				C179DD072282D5FC0082728A /* EyeballMask.swift in Sources */,
 				C1400B68227AE78900D10312 /* UITableView+Dequeueing.swift in Sources */,
 				C1400B65227AE5F000D10312 /* ListCell.swift in Sources */,
 				C1400B44227ACA9C00D10312 /* RootCoordinator.swift in Sources */,

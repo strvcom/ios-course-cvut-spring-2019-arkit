@@ -59,26 +59,32 @@ extension FaceViewController: ARSceneManaging {
 // MARK: ARSceneViewDelegate
 extension FaceViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard anchor is ARFaceAnchor else {
+        guard let anchor = anchor as? ARFaceAnchor else {
             return
         }
         
-        guard let mask = viewModel.faceMask else {
-            return
-        }
+        let faceMask = viewModel.faceMask
+        let eyeballMask = viewModel.eyeballMask
         
         DispatchQueue.main.async {
-            node.addChildNode(mask)
+            if let mask = faceMask {
+                node.addChildNode(mask)
+            }
+            if let mask = eyeballMask {
+                mask.update(with: anchor)
+                node.addChildNode(mask)
+            }
         }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let anchor = anchor as? ARFaceAnchor, let mask = viewModel.faceMask else {
+        guard let anchor = anchor as? ARFaceAnchor else {
             return
         }
         
         DispatchQueue.main.async {
-            mask.update(with: anchor)
+            self.viewModel.faceMask?.update(with: anchor)
+            self.viewModel.eyeballMask?.update(with: anchor)
         }
     }
     

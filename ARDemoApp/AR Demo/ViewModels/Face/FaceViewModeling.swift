@@ -10,6 +10,7 @@ import ARKit
 
 protocol FaceViewModeling {
     var environmentPath: String { get }
+    var eyeballMask: EyeballMask? { get }
     var faceMask: FaceMask? { get }
     var device: MTLDevice? { get set }
     func loopFaceMaskTexture()

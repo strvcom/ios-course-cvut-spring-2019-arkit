@@ -19,10 +19,18 @@ class FaceViewModel: FaceViewModeling {
         guard let device = device else {
             return nil
         }
-        let mask = createFaceMask(with: device, texture: self.texture)
+        let mask = createFaceMask(with: self.texture)
         return mask
     }()
     
+    lazy var eyeballMask: EyeballMask? = {
+        guard let device = device else {
+            return nil
+        }
+        let mask = createEyeballMask()
+        return mask
+    }()
+
     init() {
         let color = UIColor.yellow
         faceMaskColor = color
@@ -48,12 +56,21 @@ class FaceViewModel: FaceViewModeling {
 
 // MARK: Private methods
 private extension FaceViewModel {
-    func createFaceMask(with device: MTLDevice, texture: FaceMask.Texture) -> FaceMask? {
-        guard let geometry = ARSCNFaceGeometry(device: device) else {
+    func createFaceMask(with texture: FaceMask.Texture) -> FaceMask? {
+        guard let device = device, let geometry = ARSCNFaceGeometry(device: device) else {
             print("Unable to create face geometry")
             return nil
         }
         
         return FaceMask(geometry: geometry, texture: texture)
+    }
+    
+    func createEyeballMask() -> EyeballMask? {
+        guard let device = device, let geometry = ARSCNFaceGeometry(device: device) else {
+            print("Unable to create eyeball geometry")
+            return nil
+        }
+        
+        return EyeballMask(geometry: geometry)
     }
 }
