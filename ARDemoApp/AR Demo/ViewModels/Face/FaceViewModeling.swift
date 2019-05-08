@@ -9,5 +9,8 @@
 import ARKit
 
 protocol FaceViewModeling {
-    func createFaceMask(with device: MTLDevice, color: UIColor) -> FaceMask?
+    var environmentPath: String { get }
+    var faceMask: FaceMask? { get }
+    var device: MTLDevice? { get set }
+    func loopFaceMaskTexture()
 }

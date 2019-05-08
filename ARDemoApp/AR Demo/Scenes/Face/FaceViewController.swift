@@ -16,8 +16,6 @@ class FaceViewController: UIViewController, NibNameIdentifiable {
     // swiftlint:disable:next implicitly_unwrapped_optional
     var viewModel: FaceViewModeling!
     
-    private var faceMask: FaceMask?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,13 +40,18 @@ private extension FaceViewController {
     @objc func didTapOnResetButton() {
         resetSession()
     }
+    
+    @objc func didTapOnLoopButton() {
+        viewModel.loopFaceMaskTexture()
+    }
+
 }
 
 // MARK: AR Scene managing
 extension FaceViewController: ARSceneManaging {
     func resetSession() {
         let configuration = ARFaceTrackingConfiguration()
-        
+
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 }
@@ -60,19 +63,17 @@ extension FaceViewController: ARSCNViewDelegate {
             return
         }
         
-        guard let device = renderer.device,
-            let mask = viewModel.createFaceMask(with: device, color: .red) else {
+        guard let mask = viewModel.faceMask else {
             return
         }
         
         DispatchQueue.main.async {
-            self.faceMask = mask
             node.addChildNode(mask)
         }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let anchor = anchor as? ARFaceAnchor, let mask = faceMask else {
+        guard let anchor = anchor as? ARFaceAnchor, let mask = viewModel.faceMask else {
             return
         }
         
@@ -96,9 +97,14 @@ extension FaceViewController: ARSCNViewDelegate {
 private extension FaceViewController {
     func setup() {
         navigationItem.title = NSLocalizedString("FACE_TRACKING", comment: "")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("RESET", comment: ""), style: .plain, target: self, action: #selector(self.didTapOnResetButton))
+        let resetButton = UIBarButtonItem(title: NSLocalizedString("RESET", comment: ""), style: .plain, target: self, action: #selector(self.didTapOnResetButton))
+        let loopButton = UIBarButtonItem(title: NSLocalizedString("LOOP", comment: ""), style: .plain, target: self, action: #selector(self.didTapOnLoopButton))
+        navigationItem.rightBarButtonItems = [resetButton, loopButton]
 
+        viewModel.device = sceneView.device
+        
         sceneView.delegate = self
+        sceneView.scene.lightingEnvironment.contents = viewModel.environmentPath
         
         resetSession()
     }

@@ -52,6 +52,7 @@
 		C179DD002282C20C0082728A /* FaceViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DCFF2282C20C0082728A /* FaceViewModeling.swift */; };
 		C179DD022282C2250082728A /* FaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD012282C2250082728A /* FaceViewModel.swift */; };
 		C179DD052282C49C0082728A /* FaceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179DD042282C49C0082728A /* FaceMask.swift */; };
+		C179DD092282F9050082728A /* face.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C179DD082282F9050082728A /* face.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		C179DCFF2282C20C0082728A /* FaceViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModeling.swift; sourceTree = "<group>"; };
 		C179DD012282C2250082728A /* FaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewModel.swift; sourceTree = "<group>"; };
 		C179DD042282C49C0082728A /* FaceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMask.swift; sourceTree = "<group>"; };
+		C179DD082282F9050082728A /* face.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = face.scnassets; sourceTree = "<group>"; };
 		DE08576816D40302A48E8444 /* Pods-AR Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR Demo.debug.xcconfig"; path = "Target Support Files/Pods-AR Demo/Pods-AR Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,6 +366,7 @@
 				C1400BB5227B099300D10312 /* art.scnassets */,
 				C179DCE8228016610082728A /* saturn.scnassets */,
 				C179DCF722817BE20082728A /* dice.scnassets */,
+				C179DD082282F9050082728A /* face.scnassets */,
 			);
 			path = SceneAssets;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				C179DCEE2280364E0082728A /* DiceViewController.storyboard in Resources */,
 				C1400BBF227B0CBE00D10312 /* wheelbarrow.usdz in Resources */,
 				C179DCFD2282C02F0082728A /* FaceViewController.storyboard in Resources */,
+				C179DD092282F9050082728A /* face.scnassets in Resources */,
 				C1400BB4227B092800D10312 /* XcodeTemplateViewController.storyboard in Resources */,
 				C1400B312279BF5B00D10312 /* LaunchScreen.storyboard in Resources */,
 				C179DCE9228016610082728A /* saturn.scnassets in Resources */,

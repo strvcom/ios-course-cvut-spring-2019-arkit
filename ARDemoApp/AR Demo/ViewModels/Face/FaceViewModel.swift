@@ -9,12 +9,51 @@
 import ARKit
 
 class FaceViewModel: FaceViewModeling {
-    func createFaceMask(with device: MTLDevice, color: UIColor) -> FaceMask? {
+    let environmentPath = "face.scnassets/Materials/Environment.jpg"
+    weak var device: MTLDevice?
+    
+    private let faceMaskColor: UIColor
+    private var texture: FaceMask.Texture
+    
+    lazy var faceMask: FaceMask? = {
+        guard let device = device else {
+            return nil
+        }
+        let mask = createFaceMask(with: device, texture: self.texture)
+        return mask
+    }()
+    
+    init() {
+        let color = UIColor.yellow
+        faceMaskColor = color
+        texture = .basic(color: color)
+    }
+    
+    func loopFaceMaskTexture() {
+        let nextTexture: FaceMask.Texture
+        
+        switch texture {
+        case .basic:
+            nextTexture = .metalic(color: faceMaskColor)
+        case .metalic:
+            nextTexture = .zombie
+        case .zombie:
+            nextTexture = .basic(color: faceMaskColor)
+        }
+        
+        texture = nextTexture
+        faceMask?.update(with: texture)
+    }
+}
+
+// MARK: Private methods
+private extension FaceViewModel {
+    func createFaceMask(with device: MTLDevice, texture: FaceMask.Texture) -> FaceMask? {
         guard let geometry = ARSCNFaceGeometry(device: device) else {
             print("Unable to create face geometry")
             return nil
         }
         
-        return FaceMask(geometry: geometry, color: color)
+        return FaceMask(geometry: geometry, texture: texture)
     }
 }
