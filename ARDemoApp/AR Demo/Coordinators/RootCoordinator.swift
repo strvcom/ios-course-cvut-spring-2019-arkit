@@ -65,8 +65,10 @@ extension RootCoordinator: ListCoordinating {
             let dice = DiceViewController.fromStoryboard
             dice.viewModel = DiceViewModel()
             root.pushViewController(dice, animated: true)
-        default:
-            break
+        case .face:
+            let face = FaceViewController.fromStoryboard
+            face.viewModel = FaceViewModel()
+            root.pushViewController(face, animated: true)
         }
     }
     
