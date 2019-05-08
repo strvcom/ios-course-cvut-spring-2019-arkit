@@ -86,14 +86,17 @@ private extension EyeballMask {
     
     func updateEyeballs(with anchor: ARFaceAnchor) {
         let leftEyeMatrix = SCNMatrix4(anchor.leftEyeTransform)
+        let leftEyeBlinkProgress = anchor.blendShapes[.eyeBlinkLeft] as? Float ?? 0
         let rightEyeMatrix = SCNMatrix4(anchor.rightEyeTransform)
-        
-        update(eyeball: leftEyeball, with: leftEyeMatrix)
-        update(eyeball: rightEyeball, with: rightEyeMatrix)
+        let rightEyeBlinkProgress = anchor.blendShapes[.eyeBlinkRight] as? Float ?? 0
+
+        update(eyeball: leftEyeball, with: leftEyeMatrix, blinkProgress: leftEyeBlinkProgress)
+        update(eyeball: rightEyeball, with: rightEyeMatrix, blinkProgress: rightEyeBlinkProgress)
     }
     
-    func update(eyeball: SCNNode, with transform: SCNMatrix4) {
+    func update(eyeball: SCNNode, with transform: SCNMatrix4, blinkProgress: Float) {
         eyeball.transform = transform
         eyeball.position.z += Float(eyeBallRadius/2)
+        eyeball.scale.y = 1 - blinkProgress
     }
 }
